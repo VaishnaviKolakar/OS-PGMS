@@ -1,0 +1,32 @@
+echo "the present working directory is"
+pwd
+echo "enter the directory name which you want to be a current working directory"
+
+read dir
+
+cd $dir 
+
+mkdir os_lab
+echo " The directory named os_lab is created"
+
+echo "enter the name of the directory to be removed"
+read r
+rmdir $r
+
+echo "enter the source and destination file names"
+read s1
+read s2
+
+cp $s1 $s2
+
+mv $s1 $s2 os_lab
+echo "both the files have moved to os_lab"
+ls -l os_lab
+
+echo "enter the name of the file to be removed"
+read f
+rm $f
+echo "the file $f is removed successfully " 
+
+cd ..
+echo "moving to root directory "
