@@ -1,0 +1,16 @@
+echo "Enter the current working directory name"
+read dir
+ls -l > f2.txt
+grep '^d' f2.txt > g1.txt
+echo "the number of directories in a current directory"
+wc -l g1.txt
+grep '-' f2.txt > g1.txt
+echo "the number of files in a directory is "
+wc -l g1.txt
+echo "Enter the name of the file"
+read file
+ls -l $file
+
+chmod u+x,g+w $file
+echo "The file after changing the permission is"
+ls -l $file
